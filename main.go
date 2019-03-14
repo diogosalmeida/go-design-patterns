@@ -21,7 +21,9 @@ func main() {
 
 // GetPeople func
 func GetPeople(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(people)
+	w.WriteHeader(200)
+	w.Write([]byte("oi"))
+	//json.NewEncoder(w).Encode(people)
 }
 
 // GetPerson func
